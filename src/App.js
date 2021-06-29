@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,27 +7,34 @@ import {
   Link
 } from "react-router-dom";
 import Header from './components/Header'
-import Logo from './components/Logo'
+//import Logo from './components/Logo'
 // import Main from './components/Main'
+
 import Lunch from './components/Lunch'
 import Order from './components/Order'
 
 function App() {
   return (
-  <Router>
-    <Switch>
-      <Route path = '/login'></Route>
-      <Route path = '/lunch'></Route>
-      <Route path = '/drinks'></Route>
-    <div className='background'>
-      <Header/>
-      <Lunch/>
-      <Lunch/>
-      <Lunch/>
-      <Lunch/>
-      <Order/>
-    </div>
+    <Router>
+     <div className='background'>
+       <Switch>
+        <Route path ='/' exact>
+        </Route>
+        <Route path = '/lunch'>
+          <Header/>
+          <Lunch/>
+          <Lunch/>
+          <Lunch/>
+          <Lunch/>
+          <Order/>
+        </Route>
+        <Route path = '/drinks'>
+        <Lunch/>
+        </Route>
+    
+    
     </Switch>
+    </div>
     </Router>
   );
 }

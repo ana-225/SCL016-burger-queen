@@ -1,5 +1,5 @@
 const Drinks = () => {
-  return(
+  return (
     <div className = 'drinks-container'>
       <div>
         <img src = 'https://i.ibb.co/q7hxMx8/soju.png' alt = ''/>

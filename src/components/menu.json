@@ -1,0 +1,67 @@
+{
+  "koreanMenu": [
+      {
+          "id": "1",
+          "images": "https://i.ibb.co/MnMrTv7/bibimbap.png",
+          "name": "Bibimbap",
+          "type": "Food",
+          "description": "Consiste en un plato de arroz, verduras, carne y huevo con unos aliños y una salsa.",
+          "price": "13490"
+      },
+      {
+          "id": "2",
+          "images": "https://i.ibb.co/pzj5BWD/kimchi.png",
+          "name": "Kimchi",
+          "type": "Food",
+          "description": "Platillo coreano hecho a base de preparación fermentada que tiene como ingrediente básico la col asiática o repollo.",
+          "price": "7490"
+      },
+      {
+          "id": "3",
+          "images": "https://i.ibb.co/nrrcz9S/samgyeopsal.png",
+          "name": "Samgyeopsal",
+          "type": "Food",
+          "description": " Cortes muy parecidos al tocino pero más gruesos, previamente condimentados con  ajo, cebolla, hongos, kimchi, y pimientos.",
+          "price": "14490"
+      },
+      {
+          "id": "4",
+          "images": "https://i.ibb.co/mhhNWz1/bulgogi.png",
+          "name": "Bulgogi",
+          "type": "Food",
+          "description": "El ingrediente fundamental es ternera cortada en tiras y marinada con salsa de soja, azúcar, aceite de sésamo y ajo que posteriormente se cocina a la parrilla",
+          "price": "8290"
+      },
+      {    "id": "5",
+          "images": "https://i.ibb.co/q7hxMx8/soju.png",
+          "name": "Soju",
+          "type": "Drink",
+          "description": "Bebida alcohólica destilada hecha de arroz.",
+          "price": "3390"
+      },
+      {
+          "id": "6",
+          "images": "https://i.ibb.co/ssF4S8Q/sake.png",
+          "name": "Sake",
+          "type": "Drink",
+          "description": "bebida alcohólica obtenida por fermentación del arroz.",
+          "price": "6490"
+      },
+      {
+          "id": "7",
+          "images": "https://i.ibb.co/mNmrM8N/zumo-frutas.png",
+          "name": "Zumo de Frutas",
+          "type": "Drink",
+          "description": "Jugo concentrado de frutas.",
+          "price": "2190"
+      },
+      {
+          "id": "8",
+          "images": "https://i.ibb.co/j6Ysq7t/te-coreano.png",
+          "name": "Té Coreano",
+          "type": "Drink",
+          "description": "Infusión de las hojas y brotes de la planta del té",
+          "price": "1590"
+      }
+  ]
+}

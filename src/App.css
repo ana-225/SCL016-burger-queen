@@ -1,4 +1,6 @@
 .logo {
+  display: flex;
+  align-content: center;
   width: 21rem;
   height: 23rem;
 }
@@ -11,7 +13,38 @@
   height: 15vh;  /*7.25rem*/
 }
 
-.client-info, .table-info {
+.login-container {
+  background-image: url('https://i.ibb.co/P1BQqpV/background.png');
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  border-radius: 2rem;
+}
+
+.btn-primary:hover {
+  background-color: #FA2A44;
+  border-color: #FA2A44;
+}
+
+Form{
+  display: flex;
+  flex-direction: column;
+}
+
+.clientInfo, .tableInfo {
   height: 2.625rem;
   width: 21.625rem;
 }
@@ -42,4 +75,11 @@
   width: 40%;
   display: flex;
   
+}
+
+.drinks-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
 }

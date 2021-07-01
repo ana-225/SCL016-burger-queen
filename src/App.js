@@ -7,11 +7,12 @@ import {
   Link
 } from "react-router-dom";
 import Header from './components/Header'
-//import Logo from './components/Logo'
+import Logo from './components/Logo'
 // import Main from './components/Main'
 
 import Lunch from './components/Lunch'
 import Order from './components/Order'
+import Drinks from './components/Drinks'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
      <div className='background'>
        <Switch>
         <Route path ='/' exact>
+          <Logo/>
         </Route>
         <Route path = '/lunch'>
           <Header/>
@@ -29,10 +31,14 @@ function App() {
           <Order/>
         </Route>
         <Route path = '/drinks'>
-        <Lunch/>
+          <Header/>
+          <Drinks/>
+          <Drinks/>
+          <Drinks/>
+          <Drinks/>
         </Route>
-    
-    
+
+
     </Switch>
     </div>
     </Router>

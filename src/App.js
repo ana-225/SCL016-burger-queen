@@ -13,6 +13,7 @@ import './App.css'
 import Waiter from './components/Waiter.jsx'
 //import Order from './components/Order.jsx'
 import Drinks from './components/Drinks.jsx'
+import HeaderKitchen from './components/HeaderKitchen';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         <Route path = '/drinks'>
           <Header/>
           <Drinks/>
+        </Route>
+        <Route path = '/kitchen'>
+          <HeaderKitchen/>
         </Route>
     </Switch>
     </div>

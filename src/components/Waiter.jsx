@@ -3,25 +3,20 @@ import React, { useState } from 'react'
 
 const Waiter = () => {
   const [lunch] = useState(menu);
-  const [filteredState, setFilteredState] = useState(0);
+  const [actualFilter, changeFilter] = useState('Food');
 
-  console.log('filtered state',filteredState);
+  console.log(actualFilter);
 
-  const filteredData = (type) => {
-    console.log(type);
-    const data = menu.koreanMenu.filter(menu => menu.type === type);
-    return setFilteredState(data);
-  }
 
   return ( 
     <div className='lunch-container'>
       <div className='categories'>
-        <button className='btn-secondary' onClick={() => filteredData('Food')}>Almuerzos</button>
-        <button className='btn-secondary' onClick={() => filteredData('Drink')}>Bebestibles</button>
+        <button className='btn-secondary' onClick={() => changeFilter('Food')}>Almuerzos</button>
+        <button className='btn-secondary' onClick={() => changeFilter('Drink')}>Bebestibles</button>
       </div>
       <div>
         {
-          !filteredState ? lunch.koreanMenu.map((item, index) => {
+          lunch.koreanMenu.filter(menu => menu.type === actualFilter).map((item, index) => {
           const {name, description, price } = item;
            return ( 
            <ul key={index}>
@@ -39,7 +34,7 @@ const Waiter = () => {
             </button>
             </ul> 
           )
-        }) : <div>eaea</div>
+        })
         }
       </div>
     </div>

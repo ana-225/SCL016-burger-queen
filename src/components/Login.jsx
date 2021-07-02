@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from '../firebaseconfig'
 import { Form, Button } from 'react-bootstrap'
+import logo from '../img/logo.png'
 
 
 const Login = () => {
@@ -28,7 +29,7 @@ const Login = () => {
   return ( 
   <div className = 'login-container'>
     <div>
-      <img src='https://i.ibb.co/VpR2QsY/logo-korean.png' className='logo' alt = ''></img>
+      <img src={logo} className='logo' alt = ''></img>
     </div>
     <div>
       <Form>

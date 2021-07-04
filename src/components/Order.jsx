@@ -1,23 +1,14 @@
+import nameContext from "../context/nameContext";
+
 const Order = () => {
   return (
-    <div>
-      <section className = 'order-container'>
-        <ul>
-          <li> 
-            <h1>Nombre Producto</h1>
-            <p>Precio Producto</p>
-          </li>
-          <li>
-            <h1>Nombre Producto</h1>
-            <p>Precio Producto</p>
-          </li>
-          <li>
-            <h1>Nombre Producto</h1>
-            <p>Precio Producto</p>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <nameContext.Provider>
+      <div>
+        <form>
+          
+        </form>
+      </div>
+    </nameContext.Provider>
   )
 }
 

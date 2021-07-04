@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;900&display=swap');
 
+/* body {
+  background: linear-gradient(to bottom,#484848, #000000);
+} */
+
 .logo {
   display: flex;
   align-content: center;
@@ -12,7 +16,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 15vh;  /*7.25rem*/
+  height: 15vh;
 }
 
 .login-container {
@@ -46,6 +50,8 @@ Form{
   flex-direction: column;
 }
 
+
+
 .clientInfo, .tableInfo {
   height: 2.625rem;
   width: 21.625rem;
@@ -76,6 +82,22 @@ Form{
   background-color: #4E4E4E;
 }
 
+.waiter-container {
+  display: flex;
+  margin: 1.5rem;
+  justify-content: space-between;
+}
+
+.menu-box {
+  justify-content: space-evenly;
+}
+
+/* .lunch {
+  margin-left: 1rem;
+  width: 23rem;
+  height: auto;
+} */
+
 .lunch-container {
   display: inline-flex;
   flex-direction: column;
@@ -103,3 +125,16 @@ ul {
   align-items: center;
   width: 20%;
 }
+
+.order-list {
+  border-color: #FA2A44;
+  border-radius: 1.25rem;
+  width: 30rem;
+  height: auto;
+  background-color: #FA2A44;
+}
+
+.product-name {
+  font-weight: bold;
+}
+

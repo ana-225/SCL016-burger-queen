@@ -6,20 +6,18 @@ const Waiter = () => {
   const [lunch] = useState(menu);
   const [actualFilter, changeFilter] = useState('Food');
 
-  console.log(actualFilter);
-
-
   return ( 
     <div className='lunch-container'>
       <div className='categories'>
         <button className='btn-secondary' onClick={() => changeFilter('Food')}>Almuerzos</button>
         <button className='btn-secondary' onClick={() => changeFilter('Drink')}>Bebestibles</button>
       </div>
-      <div>
+      <div className='lunch'>
         {
           lunch.koreanMenu.filter(menu => menu.type === actualFilter).map((item, index) => {
-          const {name, description, price } = item;
+          const {name, price } = item;
            return ( 
+          <div className='menu-box'>
            <ul key={index}>
               <li>
                 <img src={item.images} alt={item.name} className="foodImage" />
@@ -27,13 +25,11 @@ const Waiter = () => {
               <li className="foodName">
                 {name}
               </li>
-              <li>
-                {description}
-              </li>
             <button>
               Agregar ${price}
             </button>
             </ul> 
+          </div>
           )
         })
         }

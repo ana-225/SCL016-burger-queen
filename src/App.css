@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;900&display=swap');
 
-/* body {
+body {
   background: linear-gradient(to bottom,#484848, #000000);
-} */
+} 
 
 .logo {
   display: flex;
@@ -84,25 +84,25 @@ Form{
 
 .waiter-container {
   display: flex;
-  margin: 1.5rem;
+  margin: 3rem;
   justify-content: space-between;
 }
 
 .menu-box {
-  justify-content: space-evenly;
+  justify-content:center;
 }
 
-/* .lunch {
-  margin-left: 1rem;
-  width: 23rem;
-  height: auto;
-} */
+.lunch{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
 .lunch-container {
-  display: inline-flex;
+  display:flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
 }
 
 ul {
@@ -111,6 +111,7 @@ ul {
 
 .foodName {
   font-weight: bold;
+  padding: 1rem;
 }
 
 .order-container {
@@ -127,14 +128,41 @@ ul {
 }
 
 .order-list {
-  border-color: #FA2A44;
+  border-color:floralwhite;
   border-radius: 1.25rem;
-  width: 30rem;
+  width: 60%;
   height: auto;
-  background-color: #FA2A44;
+  background-color: floralwhite;
 }
 
 .product-name {
   font-weight: bold;
+}
+
+/* lo que fui modificando, a order-list le cambie widht a 55%
+
+en el div de pedido */
+
+.element-list{ 
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+
+h1{
+  margin-left: 2rem;
+  text-align-last: center;
+}
+
+.foodName{
+  background-color: cornsilk;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.style-buttonLunch{
+  background-color: #FA2A44;
+  border-radius: 0.5rem;
+  color: cornsilk;
 }
 

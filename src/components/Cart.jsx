@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+// import {store} from '../firebaseconfig'
 
 const Cart = () => {
   const [CartProducts, ChangeCart] = useState('');
@@ -57,7 +58,7 @@ const Cart = () => {
       ))}
       <div>
         <hr></hr>
-        <h1>TOTAL:</h1>
+        <h2>TOTAL:</h2>
       </div>
       <button onClick={() => ChangeCart('Seccion de productos')}>Botoncito Kawaii</button>
       { CartProducts && <div>{CartProducts}</div> }

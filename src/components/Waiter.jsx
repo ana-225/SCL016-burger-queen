@@ -20,14 +20,16 @@ const Waiter = () => {
           <div className='menu-box'>
            <ul key={index}>
               <li>
-                <img src={item.images} alt={item.name} className="foodImage" />
+                <img src={item.images} alt={item.name} />
               </li>
-              <li className="foodName">
+              <div className ="foodName">
+              <li>
                 {name}
               </li>
-            <button>
+            <button className='style-buttonLunch'>
               Agregar ${price}
             </button>
+            </div>
             </ul> 
           </div>
           )

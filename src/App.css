@@ -76,6 +76,9 @@ Form{
   color: #fff;
   background-color: #CB0019;
   border-color: #CB0019;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 1rem 1rem;
 }
 
 .btn-secondary:hover {
@@ -101,8 +104,8 @@ Form{
 
 .lunch-container {
   display:flex;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column;
+  align-items: center; */
 }
 
 ul {
@@ -178,4 +181,10 @@ h1{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.boxMenu{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

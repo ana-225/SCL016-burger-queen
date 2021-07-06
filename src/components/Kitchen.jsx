@@ -1,9 +1,11 @@
 
+const Kitchen  = () => {
+  return (
+    <div className='kitchen-container'>
 
-// const Kitchen  = () => {
-//   return (
+    </div>
     
-//   )
-// }
+  )
+}
 
-// export default Kitchen;
+export default Kitchen;

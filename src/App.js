@@ -4,17 +4,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-  //Link
 } from "react-router-dom";
+
 import Header from './components/Header.jsx';
 import Login from './components/Login.jsx';
-// import Main from './components/Main.jsx'
 import './App.css'
 import Waiter from './components/Waiter.jsx';
-//import Order from './components/Order.jsx'
 import Drinks from './components/Drinks.jsx';
 import HeaderKitchen from './components/HeaderKitchen';
 import Cart from './components/Cart.jsx';
+import Kitchen from './components/Kitchen';
 
 const  App = () => {
   return (
@@ -28,7 +27,6 @@ const  App = () => {
           <Header />
           <div className='waiter-container'>
           <Waiter />
-          <Cart />
           </div>
         </Route>
         <Route path = '/drinks'>
@@ -37,6 +35,7 @@ const  App = () => {
         </Route>
         <Route path = '/kitchen'>
           <HeaderKitchen />
+          <Kitchen />
         </Route>
     </Switch>
     </div>

@@ -20,7 +20,7 @@ body {
 }
 
 .login-container {
-  background-image: url('./img/background.png');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/burger-queen-fee8c.appspot.com/o/Im%C3%A1genes%20Men%C3%BA%2Fbackground.png?alt=media&token=f6a45c64-e471-4248-9f09-6e001a999f5b');
   background-attachment: fixed;
   background-position: center; 
   background-repeat: no-repeat; 
@@ -166,3 +166,16 @@ h1{
   color: cornsilk;
 }
 
+.kitchen-container {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/burger-queen-fee8c.appspot.com/o/Im%C3%A1genes%20Men%C3%BA%2Fbackground-kitchen.png?alt=media&token=80ade2ed-380f-42ff-8a92-9cd8a2848588');
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

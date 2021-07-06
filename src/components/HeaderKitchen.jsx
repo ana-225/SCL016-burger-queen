@@ -7,7 +7,7 @@ const HeaderKitchen = () => {
       </h1>
     </div>
     <div>
-      <button className = 'return-btn'>
+      <button className = 'return-btn' onClick={() => window.location.href = "http://localhost:3000/"}>
         <img src='https://i.ibb.co/ZdR2ZG0/back.png' alt= ''/>
       </button>
       </div>

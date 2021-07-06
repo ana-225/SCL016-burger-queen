@@ -1,10 +1,18 @@
 import menu from './menu.json'
-import React, { useState,useHistory} from 'react'
-import {auth} from '../firebaseconfig'
+import React, { useState} from 'react'
+//import {auth} from '../firebaseconfig'
+import Product from './Product';
+import Cart from './Cart'
 
 const Waiter = () => {
   const [lunch] = useState(menu);
   const [actualFilter, changeFilter] = useState('Food');
+  const [cart, addToCart] = useState([]);
+
+  const changeCart = (name, price) => {
+    addToCart(oldArray => [...oldArray, {name: name, price: price}]);
+    console.log(cart);
+  }
 
   return ( 
     <div className='lunch-container'>
@@ -14,45 +22,26 @@ const Waiter = () => {
       </div>
       <div className='lunch'>
         {
-          lunch.koreanMenu.filter(menu => menu.type === actualFilter).map((item, index) => {
-          const {name, price } = item;
-           return ( 
-          <div className='menu-box'>
-           <ul key={index}>
-              <li>
-                <img src={item.images} alt={item.name} />
-              </li>
-              <div className ="foodName">
-              <li>
-                {name}
-              </li>
-            <button className='style-buttonLunch'>
-              Agregar ${price}
-            </button>
+          lunch.koreanMenu.filter(menu => menu.type === actualFilter).map((item, key) => {
+          const {name, price, images } = item;
+           return (
+            <div key={`${name}-${key}`}>
+              <Product
+                name={name}
+                price={price}
+                image={images}
+                changeCart={changeCart}
+              />
             </div>
-            </ul> 
-          </div>
           )
         })
         }
       </div>
+      <Cart 
+        cart={cart}
+      />
     </div>
     )
 }
 
 export default Waiter;
-
-
-/*<div>
-        <img src = 'https://i.ibb.co/pzj5BWD/kimchi.png' alt = ''/>
-      </div>
-      <div>
-        <table>
-          < tbody >
-            <tr>
-              <th>Bibimbap</th>
-            </tr>
-          </tbody >
-        </table>
-        <button>$14.990 AGREGAR</button>
-      </div>*/

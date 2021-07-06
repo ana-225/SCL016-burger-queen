@@ -14,24 +14,12 @@ const Login = () => {
     color: "red"
   }
 
+  const LoginWaiter = e => {
+    console.log(e.target.innerText);
 
- 
-//  const RegistrarUsuario = (e) => {
-//     e.preventDefault()
-//         auth.createUserWithEmailAndPassword(email, pass)
-//         .then(r =>{
-//           historial.push('/')
-//         })
-//         .catch(e=> {
-//         console.log(e)
-//     })
-//   }
-
-  const LoginUsuario = ()  => {
     auth.signInWithEmailAndPassword(email, pass)
     .then((r) => {
-      console.log('pasando por aca');
-      historial.push('/lunch')
+      e.target.innerText === "Mesero" ? historial.push('/lunch') : historial.push('/kitchen')
     })
     .catch((err) => {
       const { code } = err;
@@ -69,12 +57,21 @@ const Login = () => {
             onChange = {(e) => {setPass(e.target.value)}}
             type="password" placeholder="Contraseña" />
           </Form.Group>
-      </Form>  
-        <Button 
-            onClick = {LoginUsuario}
-            variant="primary" type="submit">
-            Ingresar
+      </Form>
+        <div>  
+          <Button 
+              onClick={(e) => LoginWaiter(e)}
+              variant="primary" type="submit">
+              Mesero
           </Button>
+          <Button 
+              onClick={(e) => LoginWaiter(e)}
+              variant="primary"
+              type="submit"
+            >
+              Cocina
+          </Button>
+        </div>
           { msgerror && <div style={style}> {msgerror} </div> }
       </div>
     </div>

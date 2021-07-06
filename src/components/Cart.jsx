@@ -1,69 +1,41 @@
 import React from 'react';
 import { useState } from 'react';
+import CartItem from './CartItem';
 // import {store} from '../firebaseconfig'
 
-const Cart = () => {
-  const [CartProducts, ChangeCart] = useState('');
-  //const [Total]
+const Cart = ({ cart }) => {
+  console.log('cart from cart',cart);
 
-  const CartProductss = {
-    menu: [
-      {
-      Name: "Kimchi",
-      Price: 7490
-    },
-    {
-      Name: "Bibimbap",
-      Price: 13490
-    },
-    {
-      Name: "Samgyeopsal",
-      Price: 13490
-    },
-    {
-      Name: "Bulgogi",
-      Price: 14490
-    },
-    {
-      Name: "Soju",
-      Price: 3390
-    },
-    {
-      Name: "Sake",
-      Price: 3390
-    },
-    {
-      Name: "Zumo de Frutas",
-      Price: 2190
-    },
-    {
-      Name: "Té Coreano",
-      Price: 1590
-    }
-  ]}
+  const reducer = (accumulator, curr) => parseInt(accumulator) + parseInt(curr);
+  let total = 0;
 
+  if (cart.length){
+    total = cart
+    .map(data => data.price)
+    .reduce(reducer);
+  }
 
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
 
-  console.log('products',CartProductss);
-
-  return (
-    <div className= 'order-list'>
-      <h1>PEDIDOS</h1>
-      <hr className= 'line'></hr>
-      { CartProductss.menu.map((data, key) => ( 
-        <div className= 'element-list' key={`${data}-${key}`}> 
-          <p className= 'product-name'>{data.Name}</p>
-          <p className= 'product-price'>${data.Price}</p>
-        </div>
-      ))}
-      <div>
-        <hr></hr>
-        <h2>TOTAL:</h2>
+  return cart.length &&
+  <div className= 'order-list'>
+    <h1>PEDIDOS</h1>
+    <hr className= 'line'></hr>
+    { cart.map((data, key) => (
+      <div key={key}>
+        <CartItem
+          name={data.name}
+          price={numberWithCommas(data.price)}
+        />
       </div>
-      <button onClick={() => ChangeCart('Seccion de productos')}>Botoncito Kawaii</button>
-      { CartProducts && <div>{CartProducts}</div> }
+    ))}
+    <div>
+      <hr></hr>
+      <h2>TOTAL: ${numberWithCommas(total)}</h2>
     </div>
-  )
+  </div>
 }
 
 export default Cart;

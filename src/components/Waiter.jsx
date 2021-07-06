@@ -16,10 +16,11 @@ const Waiter = () => {
 
   return ( 
     <div className='lunch-container'>
+      <div className= 'boxMenu'>
       <div className='categories'>
         <button className='btn-secondary' onClick={() => changeFilter('Food')}>Almuerzos</button>
         <button className='btn-secondary' onClick={() => changeFilter('Drink')}>Bebestibles</button>
-      </div>
+      </div >
       <div className='lunch'>
         {
           lunch.koreanMenu.filter(menu => menu.type === actualFilter).map((item, key) => {
@@ -36,6 +37,7 @@ const Waiter = () => {
           )
         })
         }
+      </div>
       </div>
       <Cart 
         cart={cart}

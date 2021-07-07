@@ -16,7 +16,9 @@ const Waiter = () => {
   }
 
   const deleteBtn = (id) => {
-    const filtItem = cart.filter(() => menu.id !== id )
+    console.log(id)
+    const filtItem = cart.filter((product) => product.id !== id )
+    console.log(filtItem)
     addToCart(filtItem)
   }
 
@@ -48,7 +50,8 @@ const Waiter = () => {
       </div>
       <Cart 
         cart={cart}
-        deleteBtn={deleteBtn}
+        fxdelete={deleteBtn}
+        
       />
     </div>
     )

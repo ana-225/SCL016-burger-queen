@@ -8,10 +8,16 @@ const Waiter = () => {
   const [lunch] = useState(menu);
   const [actualFilter, changeFilter] = useState('Food');
   const [cart, addToCart] = useState([]);
+  // const [deleteItem, setDelete] = useState([cart]);
+  // console.log('Hola', cart);
 
-  const changeCart = (name, price) => {
-    addToCart(oldArray => [...oldArray, {name: name, price: price}]);
-    console.log(cart);
+  const changeCart = (name, price, id) => {
+    addToCart(oldArray => [...oldArray, {name: name, price: price, id: id}]);
+  }
+
+  const deleteBtn = (id) => {
+    const filtItem = cart.filter(() => menu.id !== id )
+    addToCart(filtItem)
   }
 
   return ( 
@@ -24,7 +30,7 @@ const Waiter = () => {
       <div className='lunch'>
         {
           lunch.koreanMenu.filter(menu => menu.type === actualFilter).map((item, key) => {
-          const {name, price, images } = item;
+          const {name, price, images, id } = item;
            return (
             <div key={`${name}-${key}`}>
               <Product
@@ -32,6 +38,7 @@ const Waiter = () => {
                 price={price}
                 image={images}
                 changeCart={changeCart}
+                id={id}
               />
             </div>
           )
@@ -41,6 +48,7 @@ const Waiter = () => {
       </div>
       <Cart 
         cart={cart}
+        deleteBtn={deleteBtn}
       />
     </div>
     )

@@ -12,7 +12,6 @@ import './App.css'
 import Waiter from './components/Waiter.jsx';
 import Drinks from './components/Drinks.jsx';
 import HeaderKitchen from './components/HeaderKitchen';
-import Cart from './components/Cart.jsx';
 import Kitchen from './components/Kitchen';
 
 const  App = () => {

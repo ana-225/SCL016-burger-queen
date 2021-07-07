@@ -1,11 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
 import CartItem from './CartItem';
 // import {store} from '../firebaseconfig'
 
 const Cart = ({ cart }) => {
-  console.log('cart from cart',cart);
-
   const reducer = (accumulator, curr) => parseInt(accumulator) + parseInt(curr);
   let total = 0;
 
@@ -28,6 +25,7 @@ const Cart = ({ cart }) => {
         <CartItem
           name={data.name}
           price={numberWithCommas(data.price)}
+          id={data.id}
         />
       </div>
     ))}
@@ -36,6 +34,7 @@ const Cart = ({ cart }) => {
       <h2>TOTAL: ${numberWithCommas(total)}</h2>
     </div>
   </div>
+
 }
 
 export default Cart;

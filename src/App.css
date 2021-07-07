@@ -72,17 +72,24 @@ Form{
   border-color: transparent;
 }
 
-.btn-secondary {
+ .btn-secondary {
   color: #fff;
   background-color: #CB0019;
   border-color: #CB0019;
-  border-radius: 1rem;
-  font-size: 1rem;
-  padding: 1rem 1rem;
+  border-radius: 1.87rem;
+  font-size: 1.68rem;
+  font-weight: 900;
+  font-style: normal;
+  /* padding: 1rem 1rem; */
+  width: 14.6rem;
+  height: 4rem;
+  margin: 1rem;
+
 }
 
 .btn-secondary:hover {
-  background-color: #4E4E4E;
+  background-color:#ffffff;
+  color: #CB0019;
 }
 
 .waiter-container {

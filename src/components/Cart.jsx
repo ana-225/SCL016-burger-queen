@@ -2,7 +2,7 @@ import React from 'react';
 import CartItem from './CartItem';
 // import {store} from '../firebaseconfig'
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, fxdelete }) => {
   const reducer = (accumulator, curr) => parseInt(accumulator) + parseInt(curr);
   let total = 0;
 
@@ -26,6 +26,7 @@ const Cart = ({ cart }) => {
           name={data.name}
           price={numberWithCommas(data.price)}
           id={data.id}
+          remove={fxdelete}
         />
       </div>
     ))}

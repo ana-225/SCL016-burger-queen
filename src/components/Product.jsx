@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({name, price, image, changeCart}) => {
+const Product = ({name, price, image, changeCart, id}) => {
   return (
     <div className='menu-box'>
       <ul>
@@ -11,7 +11,7 @@ const Product = ({name, price, image, changeCart}) => {
           <li>
             {name}
           </li>
-        <button className='style-buttonLunch' onClick={() => changeCart(name, price)}>
+        <button className='style-buttonLunch' onClick={() => changeCart(name, price, id)}>
           Agregar ${price}
         </button>
         </div>

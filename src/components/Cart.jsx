@@ -1,6 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
-// import {store} from '../firebaseconfig'
+// import {db} from '../firebaseconfig'
 
 const Cart = ({ cart, fxdelete }) => {
   const reducer = (accumulator, curr) => parseInt(accumulator) + parseInt(curr);
